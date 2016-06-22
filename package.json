@@ -1,9 +1,9 @@
 {
-  "name": "angular2-seed-advanced",
+  "name": "marge",
   "version": "0.0.0",
-  "description": "Advanced seed for Angular 2 apps",
+  "description": "Modern 3 way merge tool",
   "repository": {
-    "url": "https://github.com/NathanWalker/angular2-seed-advanced"
+    "url": "https://github.com/pskaarup/marge"
   },
   "scripts": {
     "build.desktop.mac": "rimraf desktop/mac/* && gulp desktop.mac",
@@ -49,10 +49,10 @@
     "webdriver-start": "node_modules/protractor/bin/webdriver-manager start",
     "webdriver-update": "node_modules/protractor/bin/webdriver-manager update"
   },
-  "author": "Minko Gechev <mgechev>",
+  "author": "Peter Skaarup <pvskaarup>",
   "contributors": [
     {
-      "name": "Nathan Walker <NathanWalker>"
+      "name": "Peter Skaarup <pvskaarup>"
     }
   ],
   "license": "MIT",
