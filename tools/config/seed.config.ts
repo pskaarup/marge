@@ -98,21 +98,21 @@ export class SeedConfig {
    * The flag for the targeting of mobile hybrid option of the application.
    * Per default the option is false and not currently supported but may be in the future.
    * @type {boolean}
-   */  
+   */
   TARGET_MOBILE_HYBRID = false;
 
   /**
    * The flag for the targeting of desktop option of the application.
    * Per default the option is false.
    * @type {boolean}
-   */  
+   */
   TARGET_DESKTOP = false;
 
   /**
    * The flag for the targeting of desktop build option of the application.
    * Per default the option is false.
    * @type {boolean}
-   */ 
+   */
   TARGET_DESKTOP_BUILD = false;
 
   /**
@@ -267,7 +267,7 @@ export class SeedConfig {
    * The default value is false. Override with the '--scss' flag.
    * @type {boolean}
    */
-  ENABLE_SCSS = argv['scss'] || false;
+  ENABLE_SCSS = argv['scss'] || true;
 
   /**
    * The list of NPM dependcies to be injected in the `index.html`.

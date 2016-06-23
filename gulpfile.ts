@@ -1,12 +1,14 @@
-import * as gulp from 'gulp';
-import * as runSequence from 'run-sequence';
+import * as gulp from "gulp";
+import * as runSequence from "run-sequence";
+import {PROJECT_TASKS_DIR, SEED_TASKS_DIR} from "./tools/config";
+import {loadTasks} from "./tools/utils";
 
-import { PROJECT_TASKS_DIR, SEED_TASKS_DIR } from './tools/config';
-import { loadTasks } from './tools/utils';
+const taskListing = require('gulp-task-listing');
 
 loadTasks(SEED_TASKS_DIR);
 loadTasks(PROJECT_TASKS_DIR);
 
+gulp.task('help', taskListing);
 
 // --------------
 // Build dev.

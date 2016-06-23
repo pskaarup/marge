@@ -9,6 +9,9 @@ import { InjectableDependency } from './seed.config.interfaces';
 export class ProjectConfig extends SeedAdvancedConfig {
 
   PROJECT_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'project');
+  SASS_OPTIONS:any = {
+    
+  };
 
   constructor() {
     super();
