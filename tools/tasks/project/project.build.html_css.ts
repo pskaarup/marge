@@ -56,11 +56,17 @@ function processComponentStylesheets() {
  * Process scss files referenced from Angular component `styleUrls` metadata
  */
 function processComponentScss() {
+  let options:any = {
+    includePaths: [
+      './node_modules/',
+      require('node-bourbon').includePaths
+    ]
+  };
   return gulp.src(join(APP_SRC, '**', '*.scss'))
     .pipe(isProd ? plugins.cached('process-component-scss') : plugins.util.noop())
     .pipe(isProd ? plugins.progeny() : plugins.util.noop())
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.sass({includePaths: ['./node_modules/']}).on('error', plugins.sass.logError))
+    .pipe(plugins.sass(options).on('error', plugins.sass.logError))
     .pipe(plugins.postcss(processors))
     .pipe(plugins.sourcemaps.write(isProd ? '.' : ''))
     .pipe(gulp.dest(isProd ? TMP_DIR : APP_DEST));

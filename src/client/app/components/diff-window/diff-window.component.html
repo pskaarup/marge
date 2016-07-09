@@ -1,7 +1,6 @@
 <div class="diff-window">
   <div class="diff-window__header">
-    <div class="reference-character"
-         [ngClass]="{'reference-character--yours': source.type == 'yours'}">
+    <div class="reference-character {{colorClassForType()}}">
       <div class="reference-character__character">
         {{windowReference()}}
       </div>

@@ -28,4 +28,16 @@ export class DiffWindow {
         return 'C';
     }
   }
+  
+  colorClassForType():string {
+    switch (this.source.type) {
+      case DiffSourceType.BASE:
+        return 'reference-character--base';
+      case DiffSourceType.YOURS:
+        return 'reference-character--yours';
+      default:
+        // DiffSourceType.THEIRS:
+        return 'reference-character--theirs';
+    }
+  }
 }

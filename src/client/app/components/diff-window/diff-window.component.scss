@@ -1,4 +1,5 @@
-@import '~bourbon';
+@import "../../../css/api";
+
 $header-height: 43px;
 $dim-font-color: #8f8f8f;
 $default-padding: 5px;
@@ -11,7 +12,10 @@ $default-padding: 5px;
   min-height: 0;
   min-width: 0;
   background-color: #e1e1e1;
+}
 
+:host:first-of-type {
+  margin-left: $default-padding;
 }
 
 .diff-window {
@@ -35,21 +39,31 @@ $default-padding: 5px;
   display: flex;
   width: $header-height;
   justify-content: center;
+
+  // colors
+  color: white;
+}
+
+.reference-character--theirs {
+  // colors
+  background-color: purple;
 }
 
 .reference-character--yours {
-  background-color: purple;
+  // colors
+  background-color: green;
+}
+
+.reference-character--base {
+  // colors
+  background-color: blue;
 }
 
 .reference-character__character {
   // box model
   display: flex;
   align-self: center;
-
-  // colors
-  color: $dim-font-color;
 }
-
 
 .diff-window__header__info {
   @extend .diff-window;
