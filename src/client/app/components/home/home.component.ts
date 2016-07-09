@@ -1,29 +1,35 @@
-// libs
-import {Store} from '@ngrx/store';
-
-// app
 import {FormComponent} from '../../frameworks/core.framework/index';
 import {NameListService} from '../../frameworks/app.framework/index';
+import {DiffWindow} from '../diff-window/diff-window.component';
+import {DiffOutput} from '../diff-output/diff-output.component';
+import {DiffToolbar} from '../diff-toolbar/diff-toolbar.component';
+import {IDiff} from '../../frameworks/diff.framework/diff.interface';
+import {CORE_DIRECTIVES} from '@angular/common';
+import DiffSourceType from '../../frameworks/diff.framework/diff-source-type.enum';
 
 @FormComponent({
   moduleId: module.id,
   selector: 'sd-home',
   templateUrl: 'home.component.html',
-  styleUrls: ['home.component.css']
+  styleUrls: ['home.component.css'],
+  directives: [DiffWindow, DiffOutput, DiffToolbar, CORE_DIRECTIVES]
 })
 export class HomeComponent {
-  public newName: string = '';
-  constructor(private store: Store<any>, public nameListService: NameListService) { 
-  
-  }
-  
-  /*
-   * @param newname  any text as input.
-   * @returns return false to prevent default form submit behavior to refresh the page.
-   */
-  addName(): boolean {
-    this.nameListService.add(this.newName);
-    this.newName = '';
-    return false;
+  diffWindows:IDiff[];
+  constructor(public nameListService:NameListService) {
+    this.diffWindows = [
+      {
+        type: DiffSourceType.BASE,
+        path: 'Path to base'
+      },
+      {
+        type: DiffSourceType.YOURS,
+        path: 'Path to yours'
+      },
+      {
+        type: DiffSourceType.THEIRS,
+        path: 'Path to theirs'
+      }
+    ];
   }
 }

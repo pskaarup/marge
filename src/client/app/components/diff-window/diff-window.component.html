@@ -1,0 +1,21 @@
+<div class="diff-window">
+  <div class="diff-window__header">
+    <div class="reference-character"
+         [ngClass]="{'reference-character--yours': source.type == 'yours'}">
+      <div class="reference-character__character">
+        {{windowReference()}}
+      </div>
+    </div>
+    <div class="diff-window__header__info">
+      <div class="diff-window__header__info__type">
+        {{source.type}}
+      </div>
+      <div class="diff-window__header__info__path">
+        {{source.path}}
+      </div>
+    </div>
+  </div>
+  <div class="diff-window__contents">
+    {{source.path}}
+  </div>
+</div>

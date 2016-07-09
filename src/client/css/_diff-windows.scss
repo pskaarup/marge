@@ -1,0 +1,22 @@
+.diff-windows {
+  //
+  // @doc flow flow controlling construction wrapping diff and output windows in columns
+  //
+
+  // Display & Box Model
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.diff-windows__sources {
+  //
+  // @doc flow flow controlling construction wrapping diff source windows in a row
+  //
+
+  // Extends
+  @extend .diff-windows;
+
+  // Display & Box Model
+  flex-direction: row;
+}

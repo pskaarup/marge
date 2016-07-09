@@ -59,6 +59,7 @@
   "devDependencies": {
     "async": "^1.4.2",
     "autoprefixer": "^6.3.6",
+    "bourbon": "^4.2.7",
     "browser-sync": "^2.11.2",
     "codelyzer": "0.0.20",
     "colorguard": "^1.1.1",

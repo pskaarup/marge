@@ -14,6 +14,7 @@ import {ToolbarComponent} from './toolbar.component';
   selector: 'sd-app',
   viewProviders: [NameListService],
   templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css'],
   directives: [LangSwitcherComponent, NavbarComponent, ToolbarComponent, PlatformDirective],
   changeDetection: ChangeDetectionStrategy.Default // Everything else uses OnPush
 })
