@@ -1,5 +1,5 @@
-import {BaseComponent} from '../../frameworks/core.framework/decorators/base.component';
-import {LogService} from '../../frameworks/core.framework/services/log.service';
+import {BaseComponent} from '../../frameworks/core/decorators/base.component';
+import {LogService} from '../../frameworks/core/services/log.service';
 
 @BaseComponent({
   moduleId: module.id,

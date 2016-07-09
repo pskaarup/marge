@@ -1,8 +1,8 @@
-import {LogService} from '../../frameworks/core.framework/services/log.service';
-import {BaseComponent} from '../../frameworks/core.framework/decorators/base.component';
+import {BaseComponent} from '../../frameworks/core/decorators/base.component';
 import {Input} from '@angular/core';
-import {IDiff} from '../../frameworks/diff.framework/diff.interface';
-import DiffSourceType from '../../frameworks/diff.framework/diff-source-type.enum';
+import {IDiff} from '../../frameworks/diff/diff.interface';
+import DiffSourceType from '../../frameworks/diff/diff-source-type.enum';
+import {LogService} from '../../frameworks/core/services/log.service';
 
 @BaseComponent({
   moduleId: module.id,
@@ -28,17 +28,4 @@ export class DiffWindow {
         return 'C';
     }
   }
-  
-  isPurple():boolean {
-    return false;
-  };
-  
-  isYellow():boolean {
-    
-  }
-  
-  isOrange():boolean {
-    
-  };
-
 }

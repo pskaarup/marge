@@ -1,11 +1,11 @@
-import {FormComponent} from '../../frameworks/core.framework/index';
-import {NameListService} from '../../frameworks/app.framework/index';
+import {FormComponent} from '../../frameworks/core/index';
+import {NameListService} from '../../frameworks/app/index';
 import {DiffWindow} from '../diff-window/diff-window.component';
 import {DiffOutput} from '../diff-output/diff-output.component';
 import {DiffToolbar} from '../diff-toolbar/diff-toolbar.component';
-import {IDiff} from '../../frameworks/diff.framework/diff.interface';
+import {IDiff} from '../../frameworks/diff/diff.interface';
 import {CORE_DIRECTIVES} from '@angular/common';
-import DiffSourceType from '../../frameworks/diff.framework/diff-source-type.enum';
+import DiffSourceType from '../../frameworks/diff/diff-source-type.enum';
 
 @FormComponent({
   moduleId: module.id,
