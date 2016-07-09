@@ -12,6 +12,7 @@
 .diff-windows__sources {
   //
   // @doc flow flow controlling construction wrapping diff source windows in a row
+  // Applies margin to the first child-selector, and the first of that type has additional left margin
   //
 
   // Extends
@@ -19,4 +20,12 @@
 
   // Display & Box Model
   flex-direction: row;
+
+  > * {
+    margin: 5px;
+    margin-left: 0;
+  }
+  > *:first-of-type {
+    margin-left: 5px;
+  }
 }

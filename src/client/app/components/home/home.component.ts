@@ -23,11 +23,11 @@ export class HomeComponent {
         path: 'Path to base'
       },
       {
-        type: DiffSourceType.YOURS,
+        type: DiffSourceType.LOCAL,
         path: 'Path to yours'
       },
       {
-        type: DiffSourceType.THEIRS,
+        type: DiffSourceType.REMOTE,
         path: 'Path to theirs'
       }
     ];

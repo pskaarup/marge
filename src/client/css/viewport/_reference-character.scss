@@ -1,0 +1,42 @@
+// Imports
+@import "../api/global-variables";
+@import "viewport-variables";
+
+.reference-character {
+  display: flex;
+  width: $viewport-header-height;
+  justify-content: center;
+
+  // colors
+  color: $default-font-color-dark-background;
+}
+
+// modifiers
+
+.reference-character--remote {
+  // colors
+  background-color: #673ab7;
+}
+
+.reference-character--local {
+  // colors
+  background-color: #4caf50;
+}
+
+.reference-character--base {
+  // colors
+  background-color: #01579b;
+}
+
+.reference-character--output {
+  // colors
+  // TODO find better color
+  background-color: #8bc34a;
+}
+
+// children
+.reference-character__character {
+  // box model
+  display: flex;
+  align-self: center;
+}

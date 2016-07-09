@@ -1,0 +1,25 @@
+// Imports
+@import "../api/global-variables";
+@import "viewport-variables";
+
+.viewport-header {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  height: $viewport-header-height;
+  margin-bottom: $default-padding;
+  align-content: center;
+}
+
+.viewport-header__info {
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: $default-padding;
+  margin-top: -2.5px;
+}
+
+.viewport-header__info__type {
+  font-size: 10px;
+  color: $dim-font-color;
+  text-transform: uppercase;
+}

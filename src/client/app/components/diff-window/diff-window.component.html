@@ -1,20 +1,20 @@
-<div class="diff-window">
-  <div class="diff-window__header">
+<div class="viewport">
+  <div class="viewport-header">
     <div class="reference-character {{colorClassForType()}}">
       <div class="reference-character__character">
         {{windowReference()}}
       </div>
     </div>
-    <div class="diff-window__header__info">
-      <div class="diff-window__header__info__type">
-        {{source.type}}
-      </div>
-      <div class="diff-window__header__info__path">
+    <div class="viewport-header__info">
+      <div class="viewport__header__info__path">
         {{source.path}}
+      </div>
+      <div class="viewport-header__info__type">
+        {{source.type}}
       </div>
     </div>
   </div>
-  <div class="diff-window__contents">
+  <div class="viewport__content">
     {{source.path}}
   </div>
 </div>

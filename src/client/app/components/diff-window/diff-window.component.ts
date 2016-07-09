@@ -21,23 +21,23 @@ export class DiffWindow {
     switch (this.source.type) {
       case DiffSourceType.BASE:
         return 'A';
-      case DiffSourceType.YOURS:
+      case DiffSourceType.LOCAL:
         return 'B';
       default:
-        // DiffSourceType.THEIRS:
+        // DiffSourceType.REMOTE:
         return 'C';
     }
   }
-  
+
   colorClassForType():string {
     switch (this.source.type) {
       case DiffSourceType.BASE:
         return 'reference-character--base';
-      case DiffSourceType.YOURS:
-        return 'reference-character--yours';
+      case DiffSourceType.LOCAL:
+        return 'reference-character--local';
       default:
-        // DiffSourceType.THEIRS:
-        return 'reference-character--theirs';
+        // DiffSourceType.REMOTE:
+        return 'reference-character--remote';
     }
   }
 }

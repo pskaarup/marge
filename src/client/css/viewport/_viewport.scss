@@ -1,0 +1,20 @@
+// Imports
+@import "../api/global-variables";
+@import "viewport-variables";
+@import "viewport-header";
+@import "reference-character";
+
+.viewport {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: $default-padding;
+  background-color: $viewport-bg-color;
+  color: $default-font-color;
+}
+
+.viewport__content {
+  @extend .viewport;
+  background-color: white;
+}
+

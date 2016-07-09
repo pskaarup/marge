@@ -7,6 +7,10 @@ div {
   padding: 0;
 }
 body {
+  //
+  // @doc allows flex box to glow by forcing body to fill the viewport
+  //
+
   position: absolute;
   top:0;
   left:0;
@@ -17,6 +21,8 @@ body {
 /* Box-sizing border-box */
 * {
   box-sizing: border-box;
+  padding:0;
+  margin:0;
 }
 
 /* Set up a default font and some padding to provide breathing room */
@@ -36,5 +42,6 @@ button:hover {
   display: none;
 }
 
-@import "./container";
-@import "./diff-windows";
+@import "container";
+@import "diff-windows";
+@import "viewport/viewport";
