@@ -1,6 +1,50 @@
+@import '../../../css/api/global-variables';
+
 :host {
   display: flex;
-  margin:5px;
-  padding:0;
-  height:50px;
+  padding: 0;
+  margin: $default-margin;
+}
+
+.hotbar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.hotbar-button {
+  display: flex;
+  justify-content: center;
+  margin-right: $default-margin;
+}
+
+.hotbar-button--unsolved-conflict {
+  color: red;
+}
+
+.hotbar-button--conflict {
+  color: green;
+}
+
+.hotbar-button__auto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2px;
+  padding-right:2px;
+}
+
+.hotbar-button__auto--active {
+  //border:1px solid red;
+  //border-top:0;
+}
+
+.hotbar-button__auto__text {
+  font-size: 10px;
+  margin-bottom: -3px;
+}
+
+.hotbar-button__auto__icon {
+  color: red;
 }

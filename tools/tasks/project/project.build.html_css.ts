@@ -57,10 +57,8 @@ function processComponentStylesheets() {
  */
 function processComponentScss() {
   let options:any = {
-    includePaths: [
-      './node_modules/',
-      require('node-bourbon').includePaths
-    ]
+    includePaths:
+      require('node-bourbon').includePaths.concat('./node_modules/')
   };
   return gulp.src(join(APP_SRC, '**', '*.scss'))
     .pipe(isProd ? plugins.cached('process-component-scss') : plugins.util.noop())
@@ -124,10 +122,14 @@ function getExternalCss() {
  * Get a stream of external scss files for subsequent processing.
  */
 function getExternalScssStream() {
+  let options:any = {
+    includePaths:
+      require('node-bourbon').includePaths.concat('./node_modules/')
+  };
   return gulp.src(getExternalScss())
     .pipe(isProd ? plugins.cached('process-external-scss') : plugins.util.noop())
     .pipe(isProd ? plugins.progeny() : plugins.util.noop())
-    .pipe(plugins.sass({includePaths: ['./node_modules/']}).on('error', plugins.sass.logError));
+    .pipe(plugins.sass(options).on('error', plugins.sass.logError));
 }
 
 /**
