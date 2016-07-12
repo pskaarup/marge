@@ -15,7 +15,7 @@ export class ProjectConfig extends SeedAdvancedConfig {
   FONTS_DEST = `${this.APP_DEST}/fonts`;
   FONTS_SRC = [
     'node_modules/font-awesome/fonts/**'
-  ]
+  ];
 
   constructor() {
     super();

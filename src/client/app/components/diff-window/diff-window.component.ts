@@ -1,6 +1,6 @@
 import {BaseComponent} from '../../frameworks/core/decorators/base.component';
 import {Input} from '@angular/core';
-import {IDiff} from '../../frameworks/diff/diff.interface';
+import {IDiff} from '../../frameworks/diff/interfaces/diff.interface';
 import DiffSourceType from '../../frameworks/diff/diff-source-type.enum';
 import {LogService} from '../../frameworks/core/services/log.service';
 
