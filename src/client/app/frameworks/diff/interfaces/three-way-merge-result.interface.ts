@@ -1,7 +1,7 @@
 import {IDiffChunk} from './diff-chunk.interface';
 export interface IThreeWayMergeResult {
-  base: any[];
-  local: {chunks:IDiffChunk[]};
+  base:any[];
+  local:{chunks:IDiffChunk[]};
   remote:{chunks:IDiffChunk[]};
   result:{
     text:any,
