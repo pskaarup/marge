@@ -1,11 +1,11 @@
 import {FormComponent} from '../../frameworks/core/index';
-import {NameListService} from '../../frameworks/app/index';
 import {DiffWindow} from '../diff-window/diff-window.component';
 import {DiffOutput} from '../diff-output/diff-output.component';
 import {DiffToolbar} from '../diff-toolbar/diff-toolbar.component';
 import {IDiff} from '../../frameworks/diff/interfaces/diff.interface';
 import {CORE_DIRECTIVES} from '@angular/common';
 import DiffSourceType from '../../frameworks/diff/diff-source-type.enum';
+import {Store} from '@ngrx/store';
 
 @FormComponent({
   moduleId: module.id,
@@ -16,7 +16,7 @@ import DiffSourceType from '../../frameworks/diff/diff-source-type.enum';
 })
 export class HomeComponent {
   diffWindows:IDiff[];
-  constructor(public nameListService:NameListService) {
+  constructor(private store: Store<any>) {
     this.diffWindows = [
       {
         type: DiffSourceType.BASE,
